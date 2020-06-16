@@ -29,4 +29,16 @@ public class GuessNumberTest {
         //then
         assertEquals(expectResult,result);
     }
+    @Test
+    public void should_get_0A4B_when_answer_given_input_string_6785_answer_string_5678(){
+        //given
+        String[] userAnswer = {"6","7","8","5"};
+        String[] standardAnswer = {"5","6","7","8"};
+        String expectResult = "0A4B";
+        //when
+        HandleUserAnswer handleUserAnswer = new HandleUserAnswer();
+        String result = handleUserAnswer.handleUserAnswerStandardAnswer(userAnswer,standardAnswer);
+        //then
+        assertEquals(expectResult,result);
+    }
 }
