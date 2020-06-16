@@ -77,4 +77,18 @@ public class GuessNumberTest {
         //then
         assertEquals(expectResult,result);
     }
+    @Test
+    public void should_get_true_when_isGameOver_given_input_4A0B_remained_chances_is4(){
+        //given
+        String handleUserAnswerResult = "4A0B";
+        int remainedChances = 0;
+        String expectDescription = "Success";
+        Boolean expectIsSuccess = true;
+        //when
+        HandleGameOver handleUserAnswer  = new HandleGameOver();
+        GameResultInfo exceptGameResultInfo = handleUserAnswer.getGameResultInfo(handleUserAnswerResult,remainedChances);
+        //then
+        assertEquals(expectDescription,exceptGameResultInfo.getDescription());
+        assertEquals(expectIsSuccess,exceptGameResultInfo.getOver());
+    }
 }
