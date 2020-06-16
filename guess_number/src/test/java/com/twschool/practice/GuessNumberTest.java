@@ -41,4 +41,16 @@ public class GuessNumberTest {
         //then
         assertEquals(expectResult,result);
     }
+    @Test
+    public void should_get_1A2B_when_answer_given_input_string_5967_answer_string_5678(){
+        //given
+        String[] userAnswer = {"5","9","6","7"};
+        String[] standardAnswer = {"5","6","7","8"};
+        String expectResult = "1A2B";
+        //when
+        HandleUserAnswer handleUserAnswer = new HandleUserAnswer();
+        String result = handleUserAnswer.handleUserAnswerStandardAnswer(userAnswer,standardAnswer);
+        //then
+        assertEquals(expectResult,result);
+    }
 }
