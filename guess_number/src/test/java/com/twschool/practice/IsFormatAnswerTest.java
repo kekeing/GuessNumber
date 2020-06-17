@@ -15,4 +15,13 @@ public class IsFormatAnswerTest {
         //then
         Assert.assertTrue(isFormatAnswer.checkUserAnswer(userAnswer));
     }
+    @Test
+    public void should_get_false_when_given_123_split_with_comma(){
+        //given
+        String[] userAnswer = {"1","2","3"};
+        //when
+        IsFormatAnswer isFormatAnswer = new IsFormatAnswer();
+        //then
+        Assert.assertFalse(isFormatAnswer.checkUserAnswer(userAnswer));
+    }
 }
